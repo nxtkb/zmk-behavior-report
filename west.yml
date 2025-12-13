@@ -1,0 +1,8 @@
+manifest:
+  remotes:
+    - name: nxtkb
+      url-base: https://github.com/nxtkb
+  projects:
+    - name: zmk-behavior-send-string
+      remote: nxtkb
+      revision: main

@@ -1,0 +1,8 @@
+name: zmk-behavior-report
+build:
+  cmake: .
+  kconfig: Kconfig
+  settings:
+    dts_root: .
+  depends:
+  - zmk-behavior-send-string 
