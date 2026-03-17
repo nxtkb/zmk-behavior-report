@@ -50,10 +50,11 @@ struct output_status_state {
 };
 
 static struct output_status_state get_state() {
-    return (struct output_status_state){.selected_endpoint = zmk_endpoints_selected(),
+    return (struct output_status_state){.selected_endpoint = zmk_endpoint_get_selected(),
                                         .active_profile_connected =
-                                            zmk_ble_active_profile_is_connected(),
-                                        .active_profile_bonded = !zmk_ble_active_profile_is_open()};
+                                            zmk_endpoint_is_connected(),
+                                        .active_profile_bonded = !zmk_ble_active_profile_is_open()
+                                        };
 }
 
 #define SYMBOL_USB "usb"            // "" /*62087, 0xF287*/
