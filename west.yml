@@ -5,4 +5,4 @@ manifest:
   projects:
     - name: zmk-behavior-send-string
       remote: nxtkb
-      revision: main
+      revision: 96fad37f0dc9bfcc32b8fd6c51233e5285b36250
