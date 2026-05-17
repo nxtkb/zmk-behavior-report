@@ -50,9 +50,9 @@ struct output_status_state {
 };
 
 static struct output_status_state get_state() {
-    return (struct output_status_state){.selected_endpoint = zmk_endpoint_get_selected(),
+    return (struct output_status_state){.selected_endpoint = zmk_endpoints_selected(),
                                         .active_profile_connected =
-                                            zmk_endpoint_is_connected(),
+                                            zmk_ble_active_profile_is_connected(),
                                         .active_profile_bonded = !zmk_ble_active_profile_is_open()
                                         };
 }
